@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>JavaScript Challenge #1</title>
+   <link rel="stylesheet" type="text/css" href="css/challenge1.css">
+  </head>
+  <body>
+    <main>
+      <h1>Challenge One</h1>
+      <form action="challenge2.html">
+        <fieldset>
+          <legend>Email subscriptions</legend>
+          <div id="check">
+            <label>
+              <input onclick ="openEmail()" type="checkbox" name="subscribe" id="subscribe"
+              >
+              Check to toggle the email field.
+            </label>
+          </div>
+
+          <div id="emailDiv">
+            <label>
+              Email Address: 
+              <input type="text" name="email" id="email">
+            </label>
+          </div>
+
+          <input type = "submit" value = "Go To Challenge 2">
+        </fieldset>
+      </form>
+  </main>
+
+  <script>
+    function openEmail(){
+      // console.log("Made it")
+      var is_checked = document.querySelector("#subscribe").checked
+      console.log(is_checked)
+
+      if (is_checked == true){
+        document.querySelector("#emailDiv").style.display = "block"
+      }
+      else{
+        document.querySelector("#emailDiv").style.display = "none"
+      }
+    }
+  </script>
+  </body>
+</html>
